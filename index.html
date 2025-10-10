@@ -182,3 +182,19 @@
   <script src="script.js"></script>
 </body>
 </html>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeEls = document.querySelectorAll(".fade-in");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target); // animuje sa len raz
+      }
+    });
+  }, { threshold: 0.2 });
+
+  fadeEls.forEach(el => observer.observe(el));
+});
+</script>
