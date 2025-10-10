@@ -333,7 +333,31 @@ a{color:var(--text);text-decoration:none}
   opacity: 1;
   transform: translateY(0);
 }
-.fade-delay-1 { transition-delay: 0.1s; }
+.fade-delay-1 { transition-delay: 0.3s; }
 .fade-delay-2 { transition-delay: 0.3s; }
 .fade-delay-3 { transition-delay: 0.5s; }
 .fade-delay-4 { transition-delay: 0.7s; }
+/* Font pre textové bloky – opis, kontakt, recenzie */
+.section p,
+.contact-list li,
+.review p {
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e4e4e4;
+}
+
+/* Jemne zvýrazni lokalitu a kontakt */
+.contact-list a,
+.contact-list li {
+  font-weight: 500;
+  color: #f2f2f2;
+}
+
+/* Text "O nás" – jemne elegantný vzhľad */
+#onas p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-style: italic;
+  text-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
