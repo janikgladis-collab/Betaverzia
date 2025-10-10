@@ -322,3 +322,14 @@ a{color:var(--text);text-decoration:none}
 .hero-content .btn {
   animation-delay: 1.1s;
 }
+/* === Fade-in animácia pri scrollnutí === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
