@@ -1,4 +1,3 @@
-
 // ================================
 // Menu: hamburger toggle
 // ================================
@@ -19,28 +18,46 @@ if (hamburger && nav){
 }
 
 // ================================
-// Reviews: auto slide every 5s
+// Reviews: auto slide every 5s (fixed)
 // ================================
 const track = document.querySelector(".reviews-track");
 const reviews = document.querySelectorAll(".review");
 let idx = 0;
-function updateReviews(){
-  if(!track || !reviews.length) return;
+
+function updateReviews() {
+  if (!track || !reviews.length) return;
   track.style.transform = `translateX(-${idx * 100}%)`;
 }
-function next(){ idx = (idx + 1) % reviews.length; updateReviews(); }
-function prev(){ idx = (idx - 1 + reviews.length) % reviews.length; updateReviews(); }
+
+function next() {
+  idx = (idx + 1) % reviews.length;
+  updateReviews();
+}
+
+function prev() {
+  idx = (idx - 1 + reviews.length) % reviews.length;
+  updateReviews();
+}
 
 document.getElementById("nextReview")?.addEventListener("click", next);
 document.getElementById("prevReview")?.addEventListener("click", prev);
-setInterval(next, 5000);
+
+// 🔹 bezpečnejší interval – nezhadzuje stránku
+if (track && reviews.length > 0) {
+  setInterval(() => {
+    if (document.hasFocus()) next();
+  }, 5000);
+}
 
 // ================================
 // Smooth scroll (nice UX)
- // ================================
+// ================================
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener("click", e => {
     const target = document.querySelector(link.getAttribute("href"));
-    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: "smooth" }); }
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: "smooth" });
+    }
   });
 });
