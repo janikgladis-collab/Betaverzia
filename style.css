@@ -285,16 +285,11 @@ a{color:var(--text);text-decoration:none}
 }
 .hero-content p {
   color: #f8f8f8;
-  background: rgba(0, 0, 0, 0.45); /* priehľadné tmavé pozadie */
-  padding: 12px 18px;
-  border-radius: 10px;
-  display: inline-block;
+  font-size: 1.1rem;
+  line-height: 1.6;
   max-width: 600px;
   margin: 0 auto 24px;
-  line-height: 1.6;
-  font-size: 1.1rem;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8); /* jemný tieň textu */
-  backdrop-filter: blur(2px); /* efekt skla – voliteľný */
-  -webkit-backdrop-filter: blur(2px);
-  box-shadow: 0 4px 14px rgba(0,0,0,0.4); /* jemný tieň okolo boxu */
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.9),
+    0 4px 12px rgba(0, 0, 0, 0.7); /* tieň okolo textu */
 }
