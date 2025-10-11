@@ -80,3 +80,13 @@ img{max-width:100%;display:block}
 
 /* small tweaks */
 .btn{background:var(--gold);color:#000;padding:10px 18px;border-radius:10px;font-weight:600;text-transform:uppercase}
+.gallery img {
+  outline: none;
+  border: none;
+}
+
+.gallery img:focus,
+.gallery img:active {
+  outline: none;
+  border: none;
+}
