@@ -361,3 +361,29 @@ a{color:var(--text);text-decoration:none}
   font-style: italic;
   text-shadow: 0 0 8px rgba(0,0,0,0.4);
 }
+/* 🧩 Fix cenníka pre tablety a iPady */
+@media (max-width: 1024px) {
+  .price-grid {
+    grid-template-columns: 1fr 1fr; /* 2 stĺpce namiesto 3 */
+  }
+
+  .price-card {
+    text-align: center;
+  }
+
+  .price {
+    display: block;
+    margin: 10px auto 0;
+  }
+}
+
+/* 🪶 A pre mobily (úzky portrét) */
+@media (max-width: 600px) {
+  .price-grid {
+    grid-template-columns: 1fr; /* len jeden stĺpec */
+  }
+
+  .price-card {
+    padding: 20px 16px;
+  }
+}
