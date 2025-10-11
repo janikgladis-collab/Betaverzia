@@ -97,3 +97,13 @@ img{max-width:100%;display:block}
 .gallery-item img:hover {
   transform: scale(1.05);
 }
+/* Odstránenie modrého rámečka alebo zvýraznenia po kliknutí/fokus e-prečítanie */
+img:focus, img:active, a:focus, a:active {
+  outline: none !important;
+  outline-offset: 0 !important;
+}
+
+/* Zakázať highlight tap-kliku na mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
