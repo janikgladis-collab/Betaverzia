@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pánsky Barber Klub Trebišov</title>
+  <link rel="icon" type="image/png" href="images/favicon.PNG" />
+
+  <!-- Fonty -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <img src="images/favicon.PNG" alt="Pánsky Barber Klub Trebišov" />
+        <span>Pánsky Barber Klub</span>
+      </a>
+      <nav id="nav" class="nav">
+        <a href="#onas">O nás</a>
+        <a href="#ponukame">Ponúkame</a>
+        <a href="#galeria">Galéria</a>
+        <a href="#recenzie">Recenzie</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+      <button id="hamburger" class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <video autoplay loop muted playsinline class="hero-video" poster="images/barber1.JPG">
+      <source src="images/barber-bg.MP4" type="video/mp4">
+      Váš prehliadač nepodporuje prehrávanie videa.
+    </video>
+    <div class="overlay"></div>
+    <div class="container hero-content">
+      <h1>Pánsky Barber Klub – Trebišov</h1>
+      <p>Moderné strihy, úprava brady a poctivá starostlivosť. Rezervujte si termín a doprajte si štýlový look.</p>
+      <a class="btn" href="https://services.bookio.com/pansky-barber-klub/widget?lang=sk">Objednať sa</a>
+    </div>
+  </section>
+
+  <section id="onas" class="section fade-in">
+    <div class="container">
+      <h2>O nás</h2>
+      <p>Sme profesionálny barber tím v Trebišove. Spájame tradičné remeslo s modernými technikami a kvalitnou kozmetikou.</p>
+    </div>
+  </section>
+
+  <section id="ponukame" class="section">
+    <div class="container">
+      <h2 class="fade-in fade-delay-1">Čo ponúkame</h2>
+      <div class="grid services">
+        <div class="card fade-in fade-delay-2">
+          <img src="images/strih.JPG" alt="Klasický strih" />
+          <h3>Klasický strih</h3>
+          <p>Moderný alebo tradičný pánsky strih podľa vašich predstáv.</p>
+        </div>
+        <div class="card fade-in fade-delay-3">
+          <img src="images/brada.JPG" alt="Úprava brady" />
+          <h3>Úprava brady</h3>
+          <p>Modelovanie, strih a ošetrenie brady s horúcim uterákom.</p>
+        </div>
+        <div class="card fade-in fade-delay-4">
+          <img src="images/komplet.JPG" alt="Komplet" />
+          <h3>Komplet</h3>
+          <p>Kompletná úprava vlasov a brady – top starostlivosť v balíku.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cennik" class="section fade-in">
+    <div class="container">
+      <h2>Cenník</h2>
+      <div class="price-grid">
+        <article class="price-card">
+          <h3>Pánsky strih</h3>
+          <p>Moderný alebo tradičný strih podľa predstáv.</p>
+          <div class="price">20 €</div>
+        </article>
+        <article class="price-card">
+          <h3>Úprava brady</h3>
+          <p>Tvarovanie, holenie a ošetrenie brady.</p>
+          <div class="price">20 €</div>
+        </article>
+        <article class="price-card">
+          <h3>Komplet</h3>
+          <p>Vlasy + brada – kompletná úprava.</p>
+          <div class="price">30 €</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria" class="section section-dark fade-in">
+    <div class="container">
+      <h2>Galéria</h2>
+      <div class="grid gallery">
+        <div class="gallery-item"><img src="images/barber1.JPG" alt="Barber – foto 1" /></div>
+        <div class="gallery-item"><img src="images/barber2.JPG" alt="Barber – foto 2" /></div>
+        <div class="gallery-item"><img src="images/barber3.JPG" alt="Barber – foto 3" /></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="recenzie" class="section fade-in">
+    <div class="container">
+      <h2>Recenzie</h2>
+      <div class="reviews">
+        <button class="arrow left" aria-label="Predošlá recenzia" id="prevReview">‹</button>
+        <div class="reviews-viewport">
+          <div class="reviews-track">
+            <article class="review">
+              <p>„Skvelý prístup a presný strih. Určite prídem znova.“</p>
+              <div class="author">Marek K.</div>
+            </article>
+            <article class="review">
+              <p>„Výborná atmosféra, brada vyzerá perfektne. Odporúčam!“</p>
+              <div class="author">Lukáš B.</div>
+            </article>
+            <article class="review">
+              <p>„Rýchlo, kvalitne a za férovú cenu. Top barber v meste.“</p>
+              <div class="author">Adam P.</div>
+            </article>
+          </div>
+        </div>
+        <button class="arrow right" aria-label="Ďalšia recenzia" id="nextReview">›</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" class="section section-dark fade-in">
+    <div class="container contact-grid">
+      <div class="contact-block">
+        <h2>Kontakt</h2>
+        <ul class="contact-list">
+          <li><img src="images/phone-icon.png" alt="" /> <a href="tel:+421918458381">+421 918 458 381</a></li>
+          <li><img src="images/email-icon.png" alt="" /> <a href="mailto:barberklubtrebisov@gmail.com">barberklubtrebisov@gmail.com</a></li>
+          <li><img src="images/location-icon.png" alt="" /> M. R. Štefánika 190/39, Trebišov</li>
+        </ul>
+        <div class="socials">
+          <a target="_blank" href="#" aria-label="Facebook"><img src="images/facebook.PNG" alt="Facebook" /></a>
+          <a target="_blank" href="#" aria-label="Instagram"><img src="images/instagram.PNG" alt="Instagram" /></a>
+        </div>
+      </div>
+      <div class="map-block">
+        <h2>Kde nás nájdete</h2>
+        <div class="map-wrap">
+          <iframe title="Mapa – Pánsky Barber Klub Trebišov" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=M.+R.+Štefánika+190/39,+Trebišov&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p id="footerYear">© 2025 Pánsky Barber Klub Trebišov</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('footerYear').innerText = `© ${new Date().getFullYear()} Pánsky Barber Klub Trebišov`;</script>
+</body>
+</html>
